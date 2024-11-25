@@ -1,0 +1,45 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+:root {
+    --color-red: hsl(0, 78%, 62%);
+    --color-cyan: hsl(180, 62%, 55%);
+    --color-orange: hsl(34, 97%, 64%);
+    --color-blue: hsl(212, 86%, 64%);
+    --color-veryDarkBlue: hsl(234, 12%, 34%);
+    --color-grayishBlue: hsl(229, 6%, 66%);
+    --color-veryLightGray: hsl(0, 0%, 98%);
+}
+
+html {
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution {
+    font-size: clamp(9px, 7.9565px + 0.3261vw, 12px);
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
