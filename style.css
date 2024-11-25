@@ -19,19 +19,89 @@ html {
     font-size: 15px;
 }
 
+body {
+    font-family: Poppins, sans-serif;
+    background-color: var(--color-veryLightGray);
+}
 
+.container {
+    width: 80%;
+    margin-inline: auto;
+    margin-block: 4rem;
+}
 
+h1 {
+    text-align: center;
+    font-weight: 200;
+    font-size: clamp(20px, 14.7826px + 1.6304vw, 35px);
+}
 
+h1 span {
+    font-weight: 600;
+    color: var(--color-veryDarkBlue);
+}
 
+p {
+    line-height: 1.5;
+}
 
+.hero-text {
+    max-width: 500px;
+    text-align: center;
+    font-weight: 400;
+    color: var(--color-grayishBlue);
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    margin-inline: auto;
+}
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 2rem;
+}
 
+.box {
+    background-color: var(--color-veryLightGray);
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px -10px var(--color-grayishBlue), -5px 0 10px -10px var(--color-grayishBlue), 5px 0 10px -10px var(--color-grayishBlue);
+}
 
+.box-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-veryDarkBlue);
+}
 
+.box-text {
+    font-weight: 400;
+    color: var(--color-grayishBlue);
+    margin-top: .3rem;
+}
 
+.supervisor {
+    border-top: 5px solid var(--color-cyan);
+}
 
+.team-builder {
+    border-top: 5px solid var(--color-red);
+}
 
+.karma {
+    border-top: 5px solid var(--color-orange);
+}
 
+.calculator {
+    border-top: 5px solid var(--color-blue);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-top: 2.5rem;
+}
 
 .attribution {
     font-size: clamp(9px, 7.9565px + 0.3261vw, 12px);
@@ -42,4 +112,33 @@ html {
 .attribution a {
     color: hsl(228, 45%, 44%);
     text-decoration: none;
+}
+
+@media (min-width: 900px) {
+
+    .grid {
+        grid-template-columns: none;
+        grid-template-areas: 
+        "...            team-builder    ..."
+        "supervisor     team-builder    calculator"
+        "supervisor     karma           calculator"
+        "...            karma           ...";
+    }
+
+    .supervisor {
+        grid-area: supervisor;
+    }
+    
+    .team-builder {
+        grid-area: team-builder;
+    }
+    
+    .karma {
+        grid-area: karma;
+    }
+    
+    .calculator {
+        grid-area: calculator;
+    }
+
 }
